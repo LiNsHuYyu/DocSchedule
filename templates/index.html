@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Date and Doc_ID Display</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Date and Doc_ID Display</h2>
+    <table>
+        <tr>
+            <th>Date Index</th>
+            {% for i in range(30) %}
+            <td>{{ '{:02}'.format(i + 1) }}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <th>Doc ID</th>
+            {% for id in date %}
+            <td>{{ doc_id_to_name[id] }}</td>
+            {% endfor %}
+        </tr>
+    </table>
+</body>
+</html>
+
