@@ -1,0 +1,71 @@
+.topnav {
+  position: sticky; /* stay visible */
+  top: 0;
+  z-index: 1000;
+  background: #ffffffcc; /* subtle translucency */
+  backdrop-filter: saturate(140%) blur(8px);
+  border-bottom: 1px solid #eee;
+}
+
+.topnav__inner {
+  max-width: 1200px; /* center content */
+  margin: 0 auto;
+  padding: 12px 16px;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr; /* left | center | right */
+  align-items: center;
+  gap: 12px;
+}
+
+.topnav__brand {
+  font-weight: 700;
+  letter-spacing: .02em;
+  color: #2b2b2b;
+  white-space: nowrap;
+}
+
+.topnav__center {
+  justify-self: center;
+  font-size: 15px;
+  font-weight: 600;
+  color: #3a3a3a;
+  white-space: nowrap;
+}
+
+.topnav__right {
+  justify-self: end;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.topnav__user {
+  color: #4a4a4a;
+  font-size: 14px;
+  max-width: 40vw; /* keep long names from pushing layout */
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.topnav__logout {
+  appearance: none;
+  border: 1px solid #dcdcdc;
+  background: #fafafa;
+  padding: 6px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform .06s ease, background .2s ease, box-shadow .2s ease;
+}
+
+.topnav__logout:hover { background: #f0f0f0; }
+.topnav__logout:active { transform: translateY(1px); }
+
+/* Small screens: compress spacing */
+@media (max-width: 520px) {
+  .topnav__inner { padding: 10px 12px; }
+  .topnav__brand { font-size: 14px; }
+  .topnav__center { font-size: 14px; }
+  .topnav__user { display: none; } /* show only Logout when space is tight */
+}
