@@ -1,0 +1,10 @@
+{
+    "name": "docschedule-root",
+    "private": true,
+    "scripts": {
+        "dev": "concurrently \"cd DocSchedule.API && dotnet run\" \"cd docschedule-frontend && npm start\""
+    },
+    "devDependencies": {
+        "concurrently": "^9.2.1"
+    }
+}
